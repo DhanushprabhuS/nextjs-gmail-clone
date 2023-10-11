@@ -8,7 +8,7 @@ export default EmailView;
 
 export async function getStaticPaths(){
 
-  const res = await fetch('http://localhost:3000/api/emailList?type=all');
+  const res = await fetch('http://127.0.0.1:3000/api/emailList?type=all');
   const {emails} = await res.json();
 
   const allPaths = emails.map(email=>{

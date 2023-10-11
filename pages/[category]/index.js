@@ -30,7 +30,7 @@ export async function getStaticProps(context){
   console.log(context);
   const type = context?.params.category;
 
-  const res = await fetch('http://localhost:3000/api/emailList?type='+type);
+  const res = await fetch('http://127.0.0.1:3000/api/emailList?type='+type);
   const {emails} = await res.json();
 
   return {
