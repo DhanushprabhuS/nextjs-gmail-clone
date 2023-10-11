@@ -26,16 +26,17 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps(context){
-  console.log('context');
-  console.log(context);
+ 
   const type = context?.params.category;
 
-  const res = await fetch('http://127.0.0.1:3000/api/emailList?type='+type);
-  const {emails} = await res.json();
+  // const res = await fetch('http://127.0.0.1:3000/api/emailList?type='+type);
+
+  const {emails} = await import('/data/data.json');
+  const data = emails.filter(e=>e.type===type);
 
   return {
     props: {
-      data: emails,
+      data,
       id: type
     },
   };
