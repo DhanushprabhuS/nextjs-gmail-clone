@@ -4,7 +4,6 @@ import Link from "next/link";
 
 const Email = ({id, expeditor, messageTitle, message, timestamp, type }) => {
   return (
-    <>
       <Link href={`/${type?type:'primary'}/${id}`} key={id} className="flex justify-between items-center border-b py-[1px] px-1 lg:px-4 text-[14px] hover:bg-[#EAF1FB] hover:shadow-sm hover:border hover:font-semibold duration-100 cursor-pointer">
         <div className="hidden sm:w-[3rem] -ml-1 text-gray-400 md:flex gap-1 cursor-pointer">
           <div className="p-1 text-gray-400 rounded-full hover:bg-[#D3E3FD] duration-150 cursor-pointer">
@@ -25,7 +24,6 @@ const Email = ({id, expeditor, messageTitle, message, timestamp, type }) => {
           <p className="text-[12px] text-gray-600 text-end">{timestamp}</p>
         </div>
       </Link>
-    </>
   );
 };
 

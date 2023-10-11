@@ -8,6 +8,7 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
   const menus = [
     {
       icon: <FiMenu className="w-5 h-5" />,
+      title: ''
     },
     {
       icon: <MdEmail className="w-5 h-5" />,
@@ -27,13 +28,11 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
     },
   ];
   return (
-    <>
       <div className="w-16 h-full flex flex-col fixed left-0 bg-[#EAF1FB]">
         {menus.map((menu) => (
           <Menu icon={menu.icon} title={menu.title} isMenuClicked={isMenuClicked} setIsMenuClicked={setIsMenuClicked}/>
         ))}
       </div>
-    </>
   );
 };
 
