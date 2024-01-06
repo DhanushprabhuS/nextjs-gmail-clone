@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { FiMenu } from "react-icons/fi";
 
 const Navbar1 = () => {
   const router = useRouter();
@@ -13,44 +14,39 @@ const Navbar1 = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between py-2 px-1 mb-0 -ml-4 lg:px-4 border-b border-gray-100 bg-slate-50 sticky top-0">
-        {/* Left Section */}
-        <div className="w-48 md:w-30 h-10 cursor-pointer ">
+      <div className="flex  items-center justify-between py-2 mb-0  bg-slate-100 w-full sticky top-0 gap-2">
+        <span></span>
+
+        <div className="w-180 md:w-30 h-10 cursor-pointer">
           <Link href={'/primary'}>
-          <Image
-          src={'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png'} 
-          alt="Gmail" 
-          className="w-full h-full"
-          width={150}
-          height={100}
-          />
+            <Image
+            src={'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png'} 
+            alt="Gmail" 
+            className="w-[150px] h-[40px]"
+            width={150}
+            height={40}
+            />
           </Link>
         </div>
 
         {/* Input */}
-        <div className="w-full pl-24">
+        <div className="w-full">
           <div className="relative hidden md:flex items-center max-w-[48rem] mx-auto">
             <input 
             type="search" 
-            className="w-full bg-[#EAF1FB] py-[10px] rounded-[1rem] pl-16 outline-0" 
-            placeholder="Search in mail" 
+            className="w-full bg-[#dae8fc] py-[13px] rounded-[2rem] pl-16 outline-0" 
+            placeholder="Search mail" 
             value={query}
             onChange={
               (e)=>{
               setQuery(e.target.value);
               }
             }
-            // onKeyDown={(e)=>{
-            //   if(e.key==='Enter'){
-            //     router.push('/search')
-            //   }
-            // }}
-            
             />
             <div className="absolute right-0 p-2 mr-2.5 rounded-full text-[#5F6368] hover:text-[#001D35] hover:bg-[#D3E3FD] duration-150 cursor-pointer">
               
             </div>
-            <div className="bg-[#EAF1FB] absolute left-0 p-[12px] rounded-l-[.7rem] outline-0">
+            <div className="bg-[#dae8fc] absolute left-0 p-[14px] rounded-l-[2rem] outline-0">
               <AiOutlineSearch className="w-5 h-5" />
             </div>
           </div>

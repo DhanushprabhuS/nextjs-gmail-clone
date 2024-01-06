@@ -1,6 +1,7 @@
 import React from "react";
 import Email from "./Email";
 
+
 const Emails = ({emails, type}) => {
  
   return (

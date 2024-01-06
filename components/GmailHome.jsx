@@ -5,6 +5,7 @@ import LeftSide from './LeftSide';
 import Inbox from './Inbox';
 import Emails from './Emails';
 import Footer from './Footer';
+import EmailTypeBtns from './EmailTypeBtns';
 
 
 
@@ -14,12 +15,12 @@ const [isMenuClicked,setIsMenuClicked] = useState(false);
 
   return (
       <div className="flex">
-        <Menus isMenuClicked={isMenuClicked} setIsMenuClicked={setIsMenuClicked} />
+       
         <div className="w-full pl-20">
           <Navbar1 />
-          <div className="flex h-full -ml-4">
-            {isMenuClicked?<LeftSide />:null}
-            <div className="w-full">
+          <div className="flex h-full -ml-4 max-w-6xl">
+            <Menus isMenuClicked={isMenuClicked} setIsMenuClicked={setIsMenuClicked} />
+            <div className="mx-auto">
               <Inbox />
               <Emails emails={emails}/>
               <Footer />

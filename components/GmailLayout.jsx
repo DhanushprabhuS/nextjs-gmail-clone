@@ -5,6 +5,7 @@ import LeftSide from './LeftSide';
 import Inbox from './Inbox';
 import Emails from './Emails';
 import Footer from './Footer';
+import EmailTypeBtns from './EmailTypeBtns';
 
 const GmailMainLayout = ({ children }) => {
 
@@ -16,10 +17,10 @@ const GmailMainLayout = ({ children }) => {
         <Menus isMenuClicked={isMenuClicked} setIsMenuClicked={setIsMenuClicked} />
         <div className="w-full pl-20">
           <Navbar1 />
-          <div className="flex h-full -ml-4">
-            {isMenuClicked?<LeftSide />:null}
-            <div className="w-full mt-0">
+          <div className="flex h-full overflow-x-hidden ">
+            <div className={"bg-slate-100 duration-200 "+(isMenuClicked?'ml-48 w-[80%]':'w-full')}>
               <Inbox />
+              <EmailTypeBtns/>
               <main>{children}</main>
               <Footer />
             </div>

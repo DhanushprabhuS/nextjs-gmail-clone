@@ -34,9 +34,30 @@ export async function getStaticProps(context){
   const {emails} = await import('/data/data.json');
   const data = emails.filter(e=>e.type===type);
 
+ 
+  
+  
+  
+  
+  
+  const processedData = data.map(obj=>{
+    console.log(obj);
+    return {...obj,date:new Date(obj.timestamp)}
+  })
+
+
+  const sordedData = processedData.sort((a,b)=>{
+    return Number(b.date)-Number(a.date);
+  })
+  
+  console.log('sorted data')
+  console.log(sordedData)
+  
+  const JSONdata = JSON.parse(JSON.stringify(sordedData))
+
   return {
     props: {
-      data,
+      data:JSONdata,
       id: type
     },
   };
