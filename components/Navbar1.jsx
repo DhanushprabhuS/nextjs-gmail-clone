@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CgMenuGridO } from "react-icons/cg";
 import { IoHelpCircleOutline, IoSettingsOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { FiMenu } from "react-icons/fi";
+import { useRouter } from "next/navigation";
+import { useDebounce } from "use-debounce";
+
 
 const Navbar1 = () => {
-  const router = useRouter();
+  
   const [query,setQuery] = useState('');
+  const router = useRouter();
+  const [value] = useDebounce(query,500);
+
+  /*useEffect(()=>{
+    router.push(`/search?value=${query}`)
+  },[query,router])
+  */
+
 
   return (
     <>
@@ -34,19 +42,22 @@ const Navbar1 = () => {
           <div className="relative hidden md:flex items-center max-w-[48rem] mx-auto">
             <input 
             type="search" 
-            className="w-full bg-[#dae8fc] py-[13px] rounded-[2rem] pl-16 outline-0" 
+            className="w-full bg-[#e0e7f0] py-[13px] rounded-[2rem] pl-16 outline-0" 
             placeholder="Search mail" 
             value={query}
             onChange={
               (e)=>{
               setQuery(e.target.value);
+              router.push(`/search?value=${query}`)
               }
             }
+            
             />
-            <div className="absolute right-0 p-2 mr-2.5 rounded-full text-[#5F6368] hover:text-[#001D35] hover:bg-[#D3E3FD] duration-150 cursor-pointer">
-              
-            </div>
-            <div className="bg-[#dae8fc] absolute left-0 p-[14px] rounded-l-[2rem] outline-0">
+            
+              <div className="absolute right-0 p-5  rounded-full  cursor-pointer" onClick={()=>setQuery('')} > 
+              </div>
+            
+            <div className="bg-[#e0e7f0] absolute left-0 p-[10px] rounded-l-[2rem] outline-0">
               <AiOutlineSearch className="w-5 h-5" />
             </div>
           </div>
@@ -64,13 +75,14 @@ const Navbar1 = () => {
             <CgMenuGridO className="w-6 h-6 text-[#5F6368] hidden sm:flex hover:text-gray-800" />
           </div>
           
-            <div className="w-9 h-9 rounded-full">
+          <div className="w-9 h-9 rounded-full">
               <img src={'https://lh3.googleusercontent.com/-U7jI9y-LItE/AAAAAAAAAAI/AAAAAAAAAAA/AFsW0b4RgpcF_yx5cu7spO1F1qRzmrIzWw/photo.jpg?sz=46'} alt="" className="object-cover w-9 h-9 rounded-full" />
-            </div>
           </div>
         </div>
+      </div>
     </>
   );
 };
 
 export default Navbar1;
+

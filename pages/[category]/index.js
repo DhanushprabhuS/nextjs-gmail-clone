@@ -1,7 +1,11 @@
 import React from 'react';
 import Email from '@/components/Emails';
+import EmailTypeBtns from '@/components/EmailTypeBtns';
 
-const EmailCategoryPage = ({data,id}) => <Email emails={data} type={id}/>
+const EmailCategoryPage = ({data,id}) =><>
+    <EmailTypeBtns/>
+    <Email emails={data}  type={id}/>
+</>
 
 export default EmailCategoryPage;
 
@@ -33,15 +37,8 @@ export async function getStaticProps(context){
 
   const {emails} = await import('/data/data.json');
   const data = emails.filter(e=>e.type===type);
-
- 
-  
-  
-  
-  
   
   const processedData = data.map(obj=>{
-    console.log(obj);
     return {...obj,date:new Date(obj.timestamp)}
   })
 
@@ -50,10 +47,9 @@ export async function getStaticProps(context){
     return Number(b.date)-Number(a.date);
   })
   
-  console.log('sorted data')
-  console.log(sordedData)
   
   const JSONdata = JSON.parse(JSON.stringify(sordedData))
+  //because date object cannot be passed
 
   return {
     props: {

@@ -1,8 +1,13 @@
+import EmailTypeBtns from '@/components/EmailTypeBtns';
 import Emails from '@/components/Emails';
 
 export default function Home({data}) {
   return (
+    <>
+      <EmailTypeBtns/>
       <Emails emails={data}/>
+    </>
+      
   )
 }
 

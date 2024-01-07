@@ -33,9 +33,6 @@ export async function getStaticProps(context){
   const category = context.params.category;
   const detailedView = context.params.detailedView;
 
-  // const res = await fetch('http://localhost:3000/api/emailList?type='+category);
-  // const {emails} = await res.json();
-
   const {emails} = await import('/data/data.json');
   
   const data = emails.filter(em=>em.id==detailedView);

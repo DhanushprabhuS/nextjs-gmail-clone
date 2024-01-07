@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-const Menu = ({ icon, title,ishover, isactive, handleActive, id, index, setId }) => {
+const Menu = ({link, icon, title,ishover, isactive, handleActive, id, index, setId }) => {
   return (
+    <Link href={`${link}`}>
     <div 
       key={title} 
       className={` text-start 
@@ -21,14 +22,9 @@ const Menu = ({ icon, title,ishover, isactive, handleActive, id, index, setId })
         </div>
 
     </div>
+    </Link>
   );
 };
 
 export default Menu;
 
-/*
-<Link href={'/'} key={title} className="flex mt-4 items-start text-[#5F6368] gap-x-5 space-y-1 pl-5 rounded-full hover:bg-[#deeafb] hover:text-[#001D35] hover:font-semibold duration-75 cursor-pointer group">
-    {icon}
-  </Link>
-
-*/
