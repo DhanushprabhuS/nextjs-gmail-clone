@@ -28,61 +28,73 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
 
   const buttons = [
     {
+      id:1,
       icon: <RiInboxFill className="w-4 h-4" />,
       title: "Inbox",
       link: '/primary'
     },
     {
+      id:2,
       icon: <MdOutlineStarBorder className="w-4 h-4" />,
       title: "Starred",
-      link: '/started'
+      link: '/'
     },
     {
+      id:3,
       icon: <IoMdTime className="w-4 h-4" />,
       title: "Snoozed",
       link: '/'
     },
     {
+      id:4,
       icon: <RiSendPlane2Line className="w-4 h-4" />,
       title: "Sent",
       link: '/'
     },
     {
+      id:5,
       icon: <RiDraftFill className="w-4 h-4" />,
       title: "Draft",
       link: '/'
     },
     {
+      id:6,
       icon: <BiLabel className="w-4 h-4" />,
       title: "Important",
       link: '/'
     },
     {
+      id:7,
       icon: <MdOutlineScheduleSend className="w-4 h-4" />,
       title: "Scheduled",
       link: '/'
     },
     {
+      id:8,
       icon: <RiSpamLine className="w-4 h-4" />,
       title: "Spam",
       link: '/'
     },
     {
+      id:9,
       icon: <BiTrash className="w-4 h-4" />,
       title: "Trash",
       link: '/'
     },
     {
+      id:10,
       icon: <MdOutlineLabel className="w-4 h-4" />,
       title: "Categories",
       link: '/'
     },
     {
+      id:11,
       icon: <MdSettings className="w-4 h-4" />,
       title: "Manage Labels",
       link: '/'
     },
     {
+      id:12,
       icon: <AiOutlinePlus className="w-4 h-4" />,
       title: "Create new label",
       link: '/'
@@ -125,7 +137,7 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
           </div>
         
           {buttons.map((menu,index) => (
-            <Menu link={menu.link} icon={menu.icon} title={menu.title} ishover={ishover||isClicked} isactive={isactive} handleActive={setIsActive} index={index} id={id} setId={setId}/>
+            <Menu link={menu.link} icon={menu.icon} title={menu.title} ishover={ishover||isClicked} isactive={isactive} handleActive={setIsActive} index={index} id={id} setId={setId} key={menu.id}/>
           ))}
         </div>
 

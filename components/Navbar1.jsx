@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDebounce } from "use-debounce";
+import Logo from '../assets/logo_gmail.png';
 
 
 const Navbar1 = () => {
@@ -28,8 +29,8 @@ const Navbar1 = () => {
         <div className="w-180 md:w-30 h-10 cursor-pointer">
           <Link href={'/primary'}>
             <Image
-            src={'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png'} 
-            alt="Gmail" 
+            src={Logo} 
+            alt="Gmail Logo" 
             className="w-[150px] h-[40px]"
             width={150}
             height={40}
@@ -76,7 +77,12 @@ const Navbar1 = () => {
           </div>
           
           <div className="w-9 h-9 rounded-full">
-              <img src={'https://lh3.googleusercontent.com/-U7jI9y-LItE/AAAAAAAAAAI/AAAAAAAAAAA/AFsW0b4RgpcF_yx5cu7spO1F1qRzmrIzWw/photo.jpg?sz=46'} alt="" className="object-cover w-9 h-9 rounded-full" />
+              <Image 
+              src={'https://assets.leetcode.com/users/avatars/avatar_1703733806.png'} 
+              alt={'Profile pic'}
+              width={100}
+              height={100}
+              className="object-cover w-9 h-9 rounded-full" />
           </div>
         </div>
       </div>

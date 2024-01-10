@@ -15,9 +15,8 @@ const GmailMainLayout = ({ children }) => {
         <div className="w-full pl-20">
           <Navbar1 />
           <div className="flex h-full overflow-x-hidden ">
-            <div className={"bg-slate-100 duration-200 "+(isMenuClicked?'ml-48 w-[80%]':'w-full')}>
-              <Inbox />
-              {/*<EmailTypeBtns/>*/}
+            <div className={"flex-col bg-slate-100 duration-200 "+(isMenuClicked?'ml-48 w-[80%]':'w-full')}>
+              {/*<Inbox  />*/}
               <main>{children}</main>
               <Footer />
             </div>

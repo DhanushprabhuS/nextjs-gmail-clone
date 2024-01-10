@@ -1,16 +1,15 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import SearchResults from '@/components/SearchResults';
+import Inbox from '@/components/Inbox';
 
 export default function EmailSearchPage ({data}) {
 
     const router = useRouter();
     const searchVal = router.query?.value;
     const lowerVal = searchVal?.toLowerCase();
-    
-    const backLink = '/search?value='+searchVal;
-
+    const backLink = `/search?value='${searchVal}`;
     const filteredData = data.filter((e)=>{
         return (
         e.expeditor?.toLowerCase().includes(lowerVal) || 
@@ -19,8 +18,25 @@ export default function EmailSearchPage ({data}) {
         )
     })
 
+  const [start,setStart] = useState(0);
+  const [end,setEnd] = useState(20);
+  const length = filteredData.length;
+  var slicedData = filteredData.slice(start,end);
+  
+  
+
+    useEffect(()=>{
+      console.log(router.query.value);
+      setStart(0);
+      setEnd(20);
+
+    },[router])
+
+
     return <>
-        <SearchResults emailsdata={filteredData}  backLink={backLink}/>
+        <Inbox start={start} setStart={setStart} 
+        end={end} setEnd={setEnd} length={length} />
+        <SearchResults emailsdata={slicedData}  backLink={backLink}/>
     </>
 }
 
@@ -40,12 +56,12 @@ export async function getStaticProps(){
       return Number(b.date)-Number(a.date);
     })
     
-    const JSONdata = JSON.parse(JSON.stringify(sordedData))
+    const JSONdata = JSON.parse(JSON.stringify(sordedData));
     //because date object cannot be passed
   
     return {
       props: {
         data:JSONdata,
-      },
+      }, 
     };
   }

@@ -8,7 +8,7 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 const Email = ({id, expeditor, messageTitle, message, timestamp, type }) => {
   return (
       <Link 
-        href={`/${type?type:'primary'}/${id}`}
+        href={`/${type}/${id}`}
         key={id} 
         className="flex items-center justify-between 
         border-[#ECEFF1] border-[0.1px]

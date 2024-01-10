@@ -5,7 +5,7 @@
             "expeditor": "Kanish S",
             "messageTitle": "Events Conducted By Sona Programmers Club",
             "message": "Hackerrank Leetcode Codechef. Quiz Puzzles etc",
-            "timestamp": "01/03/24"
+            "timestamp": "01/10/24"
         },
         {
             "id": 2,
@@ -41,7 +41,7 @@
             "expeditor": "Kanish S",
             "messageTitle": "Document related to JAVA",
             "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minima, fugit, eius totam optio fuga dignissimos, iste iure enim voluptatibus quod! Reiciendis perferendis veniam ipsum vitae modi ullam? Ipsam, id?",
-            "timestamp": "01/02/24"
+            "timestamp": "01/09/24"
         }, {
             "id": 7,
             "type": "primary",
@@ -367,7 +367,343 @@
             "messageTitle": "Event Dicoding Developer Coaching #68 : DevOps",
             "message": "Event Dicoding Developer Coaching #79. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis eos assumenda alias velit sunt sequi consequuntur fugiat ipsum hic quaerat dolor recusandae architecto impedit, perspiciatis quae quia id minima!",
             "timestamp": "08/22/23"
+        },
+
+        {
+            "id": 100,
+            "type": "promotion",
+            "expeditor": "Lucas I",
+            "messageTitle": "Year-End Clearance Sale!",
+            "message": "Celebrate the end of the year with our exclusive clearance sale. Don't miss out on amazing deals!",
+            "timestamp": "01/09/24"
+        },
+        {
+            "id": 99,
+            "type": "primary",
+            "expeditor": "Grace J",
+            "messageTitle": "Important Notice",
+            "message": "Dear user, please be advised of an important notice regarding your account. Read more inside.",
+            "timestamp": "01/08/24"
+        },
+        {
+            "id": 98,
+            "type": "social",
+            "expeditor": "Henry K",
+            "messageTitle": "Community Meetup Announcement",
+            "message": "Join us for our upcoming community meetup. It's a great opportunity to connect with fellow members.",
+            "timestamp": "01/07/24"
+        },
+        {
+            "id": 97,
+            "type": "promotion",
+            "expeditor": "Isabella L",
+            "messageTitle": "Exclusive Holiday Deals",
+            "message": "Unwrap the joy of the season with our exclusive holiday deals. Limited-time offers inside!",
+            "timestamp": "01/06/24"
+        },
+        {
+            "id": 96,
+            "type": "primary",
+            "expeditor": "James M",
+            "messageTitle": "Account Security Update",
+            "message": "To enhance your account security, we've implemented new measures. Please review the changes.",
+            "timestamp": "01/05/24"
+        },
+        {
+            "id": 95,
+            "type": "social",
+            "expeditor": "Nora N",
+            "messageTitle": "Social Club Newsletter",
+            "message": "Catch up on the latest happenings in our social club. Newsletter inside!",
+            "timestamp": "01/04/24"
+        },
+        {
+            "id": 94,
+            "type": "promotion",
+            "expeditor": "Oscar O",
+            "messageTitle": "Year-End Clearance Continues!",
+            "message": "Due to popular demand, our year-end clearance continues. Explore the ongoing deals now.",
+            "timestamp": "01/03/24"
+        },
+        {
+            "id": 93,
+            "type": "primary",
+            "expeditor": "Penelope P",
+            "messageTitle": "Account Information Update",
+            "message": "We need you to update your account information. Follow the link to complete the process.",
+            "timestamp": "01/02/24"
+        },
+        {
+            "id": 92,
+            "type": "social",
+            "expeditor": "Quinn Q",
+            "messageTitle": "New Year's Social Celebration",
+            "message": "Ring in the New Year with our exciting social celebration. Save the date and join the festivities!",
+            "timestamp": "01/01/24"
+        },
+        {
+            "id": 91,
+            "type": "promotion",
+            "expeditor": "Ryan R",
+            "messageTitle": "New Year, New Deals!",
+            "message": "Start the new year with amazing deals on your favorite products. Explore the offers now.",
+            "timestamp": "12/31/23"
+        },
+        {
+            "id": 90,
+            "type": "primary",
+            "expeditor": "Scarlett S",
+            "messageTitle": "Year-End Account Summary",
+            "message": "Review your year-end account summary. Gain insights into your financial activities.",
+            "timestamp": "12/30/23"
+        },
+        {
+            "id": 89,
+            "type": "social",
+            "expeditor": "Theo T",
+            "messageTitle": "Festive Social Gathering",
+            "message": "Celebrate the festive season with us! Join our upcoming social gathering for fun and laughter.",
+            "timestamp": "12/29/23"
+        },
+        {
+            "id": 88,
+            "type": "promotion",
+            "expeditor": "Uma U",
+            "messageTitle": "Flash Deals Extravaganza!",
+            "message": "Don't miss our flash deals extravaganza. Grab incredible discounts on a variety of products.",
+            "timestamp": "12/28/23"
+        },
+        {
+            "id": 87,
+            "type": "primary",
+            "expeditor": "Victor V",
+            "messageTitle": "Year-End Thank You",
+            "message": "A heartfelt thank you for being with us throughout the year. We appreciate your support!",
+            "timestamp": "12/27/23"
+        },
+        {
+            "id": 86,
+            "type": "social",
+            "expeditor": "Willa W",
+            "messageTitle": "Winter Social Mixer",
+            "message": "Join us for a winter social mixer filled with warmth, joy, and good company. Save your spot!",
+            "timestamp": "12/26/23"
+        },
+        {
+            "id": 85,
+            "type": "promotion",
+            "expeditor": "Xander X",
+            "messageTitle": "Year-End Bargains",
+            "message": "Discover year-end bargains on a wide range of products. Shop now and save big!",
+            "timestamp": "12/25/23"
+        },
+        {
+            "id": 84,
+            "type": "primary",
+            "expeditor": "Yara Y",
+            "messageTitle": "Holiday Greetings",
+            "message": "Wishing you and your loved ones a joyous holiday season filled with love and happiness!",
+            "timestamp": "12/24/23"
+        },
+        {
+            "id": 83,
+            "type": "social",
+            "expeditor": "Zane Z",
+            "messageTitle": "Winter Wonderland Social",
+            "message": "Experience the magic of winter at our upcoming winter wonderland social event. Save the date!",
+            "timestamp": "12/23/23"
+        },
+        {
+            "id": 82,
+            "type": "promotion",
+            "expeditor": "Aria A",
+            "messageTitle": "Holiday Specials Inside!",
+            "message": "Explore our holiday specials and find the perfect gifts for your loved ones. Limited-time offers!",
+            "timestamp": "12/22/23"
+        },
+        {
+            "id": 81,
+            "type": "primary",
+            "expeditor": "Bryce B",
+            "messageTitle": "Account Security Alert",
+            "message": "Urgent: Account security alert. Take immediate action to secure your account.",
+            "timestamp": "12/21/23"
+        },
+        {
+            "id": 80,
+            "type": "social",
+            "expeditor": "Cora C",
+            "messageTitle": "Festive Social Update",
+            "message": "Get ready for our festive social update.Exciting news and surprises await !",
+            "timestamp": "12/20/23"
+        },
+        {
+            "id": 79,
+            "type": "promotion",
+            "expeditor": "Dean D",
+            "messageTitle": "Holiday Savings Extravaganza!",
+            "message": "Celebrate the holidays with our savings extravaganza. Shop now for incredible discounts!",
+            "timestamp": "12/19/23"
+        },
+        {
+            "id": 78,
+            "type": "primary",
+            "expeditor": "Eva E",
+            "messageTitle": "Year-End Account Review",
+            "message": "It's time for your year-end account review. Access your personalized summary now.",
+            "timestamp": "12/18/23"
+        },
+        {
+            "id": 77,
+            "type": "social",
+            "expeditor": "Finn F",
+            "messageTitle": "Winter Social Gathering",
+            "message": "Join us for a winter social gathering filled with warmth, laughter, and good company. Save the date!",
+            "timestamp": "12/17/23"
+        },
+        {
+            "id": 76,
+            "type": "promotion",
+            "expeditor": "Gia G",
+            "messageTitle": "Holiday Deals Countdown",
+            "message": "The countdown to our exclusive holiday deals has begun. Don't miss out on the savings!",
+            "timestamp": "12/16/23"
+        },
+        {
+            "id": 75,
+            "type": "primary",
+            "expeditor": "Hugo H",
+            "messageTitle": "Holiday Greetings",
+            "message": "Warmest wishes for a joyful holiday season. May your days be merry and bright!",
+            "timestamp": "12/15/23"
+        },
+        {
+            "id": 74,
+            "type": "social",
+            "expeditor": "Isla I",
+            "messageTitle": "Festive Social Celebration",
+            "message": "Celebrate the festive season with our upcoming social event. Join us for fun and festivities!",
+            "timestamp": "12/14/23"
+        },
+        {
+            "id": 73,
+            "type": "promotion",
+            "expeditor": "Jack J",
+            "messageTitle": "Holiday Specials Inside!",
+            "message": "Discover holiday specials on a wide range of products. Perfect gifts for everyone on your list!",
+            "timestamp": "12/13/23"
+        },
+        {
+            "id": 72,
+            "type": "primary",
+            "expeditor": "Kira K",
+            "messageTitle": "Account Update Notification",
+            "message": "Notification: Important updates to your account have been made. Please review the changes.",
+            "timestamp": "12/12/23"
+        },
+        {
+            "id": 71,
+            "type": "social",
+            "expeditor": "Leo L",
+            "messageTitle": "Winter Social Mixer",
+            "message": "Join us for a winter social mixer filled with joy, laughter, and holiday cheer. Save the date!",
+            "timestamp": "12/11/23"
+        },
+        {
+            "id": 70,
+            "type": "promotion",
+            "expeditor": "Mia M",
+            "messageTitle": "Holiday Savings Spectacular!",
+            "message": "Experience holiday savings like never before. Spectacular deals on your favorite products!",
+            "timestamp": "12/10/23"
+        },
+        {
+            "id": 69,
+            "type": "primary",
+            "expeditor": "Nathan N",
+            "messageTitle": "Year-End Account Statement",
+            "message": "Your personalized year-end account statement is now available. Review your financial activities.",
+            "timestamp": "12/09/23"
+        },
+        {
+            "id": 68,
+            "type": "social",
+            "expeditor": "Oliver O",
+            "messageTitle": "Festive Social Update",
+            "message": "Get ready for our festive social update. Exciting announcements and surprises await!",
+            "timestamp": "12/08/23"
+        },
+        {
+            "id": 67,
+            "type": "promotion",
+            "expeditor": "Piper P",
+            "messageTitle": "Holiday Deals Extravaganza!",
+            "message": "Don't miss our holiday deals extravaganza. Incredible discounts on a variety of products!",
+            "timestamp": "12/07/23"
+        },
+        {
+            "id": 66,
+            "type": "primary",
+            "expeditor": "Quentin Q",
+            "messageTitle": "Holiday Greetings",
+            "message": "Wishing you a season filled with joy, laughter, and warm holiday wishes. Happy holidays!",
+            "timestamp": "12/06/23"
+        },
+        {
+            "id": 65,
+            "type": "social",
+            "expeditor": "Rachel R",
+            "messageTitle": "Winter Social Gathering",
+            "message": "Join us for a winter social gathering filled with festive spirit. Save the date!",
+            "timestamp": "12/05/23"
+        },
+        {
+            "id": 64,
+            "type": "promotion",
+            "expeditor": "Sam S",
+            "messageTitle": "Holiday Specials Inside!",
+            "message": "Explore our holiday specials and find the perfect gifts for your loved ones. Limited-time offers!",
+            "timestamp": "12/04/23"
+        },
+        {
+            "id": 63,
+            "type": "primary",
+            "expeditor": "Tessa T",
+            "messageTitle": "Account Security Update",
+            "message": "Urgent: Account security update. Take immediate action to secure your account.",
+            "timestamp": "12/03/23"
+        },
+        {
+            "id": 62,
+            "type": "social",
+            "expeditor": "Ulysses U",
+            "messageTitle": "Winter Wonderland Social",
+            "message": "Experience the magic of winter at our upcoming winter wonderland social event. Save the date!",
+            "timestamp": "12/02/23"
+        },
+        {
+            "id": 61,
+            "type": "promotion",
+            "expeditor": "Violet V",
+            "messageTitle": "Holiday Specials Extravaganza!",
+            "message": "Celebrate the holidays with our specials extravaganza. Shop now for incredible discounts!",
+            "timestamp": "12/01/23"
+        },
+        {
+            "id": 60,
+            "type": "social",
+            "expeditor": "William W",
+            "messageTitle": "Join Our Social Gathering",
+            "message": "Hello, We invite you to join our upcoming social gathering. Don't miss out!",
+            "timestamp": "01/09/24"
+        },
+        {
+            "id": 59,
+            "type": "promotion",
+            "expeditor": "Xena X",
+            "messageTitle": "Exclusive Deals Inside!",
+            "message": "Check out our latest promotions and grab exclusive deals before they expire.",
+            "timestamp": "01/08/24"
         }
     ]
-
 }

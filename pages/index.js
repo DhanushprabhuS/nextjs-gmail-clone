@@ -1,11 +1,20 @@
 import EmailTypeBtns from '@/components/EmailTypeBtns';
 import Emails from '@/components/Emails';
+import Inbox from '@/components/Inbox';
+import { useState } from 'react';
 
 export default function Home({data}) {
+  const [start,setStart] = useState(0);
+  const [end,setEnd] = useState(20);
+  const length = data.length;
+  var slicedData = data.slice(start,end);
+  
   return (
     <>
-      <EmailTypeBtns/>
-      <Emails emails={data}/>
+    <Inbox start={start} setStart={setStart} 
+        end={end} setEnd={setEnd} length={length}/>
+      <EmailTypeBtns />
+      <Emails emails={slicedData}/>
     </>
       
   )
@@ -13,14 +22,22 @@ export default function Home({data}) {
 
 
 export async function getStaticProps() {
-  // const res = await fetch('http://localhost:3000/api/emailList?type=primary');
-  // const {emails} = await res.json();
-
   const {emails} = await import('/data/data.json');
-  const data = emails.filter((e)=>e.type === 'primary');
+
+  const processedData = emails.map(obj=>{
+    return {...obj,date:new Date(obj.timestamp)}
+  })
+
+  const sortedData = processedData.sort((a,b)=>{
+    return Number(b.date)-Number(a.date);
+  })
+  
+  const JSONdata = JSON.parse(JSON.stringify(sortedData))
+  
+  //const data = emails.filter((e)=>e.type === 'primary');
   return {
     props: {
-      data
+      data:JSONdata
     },
   };
 }

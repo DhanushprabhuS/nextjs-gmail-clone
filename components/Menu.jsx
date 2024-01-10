@@ -6,9 +6,9 @@ const Menu = ({link, icon, title,ishover, isactive, handleActive, id, index, set
     <Link href={`${link}`}>
     <div 
       key={title} 
-      className={` text-start 
+      className={`text-start 
       px-3 py-[1px] bg-slate-100 text-[#5F6368] 
-       duration-200 cursor-pointer`}
+      duration-200 cursor-pointer`}
 
       onClick={()=>{
         handleActive(true);

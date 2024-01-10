@@ -8,7 +8,7 @@ const EmailMessage = ({data}) => {
   const router = useRouter()
 
   return (
-    <div className='bg-white h-screen w-full flex flex-col space-y-6 pl-10'>
+    <div className='bg-white h-screen w-full flex flex-col space-y-6 pl-10 mt-10'>
       <div className='flex items-center gap-3 box-content text-gray-500 mt-2'>
         <div onClick={() => router.back()} className="-ml-4 flex items-center p-2 hover:bg-gray-200 hover:text-gray-800 rounded-full duration-150 cursor-pointer">
         <MdKeyboardBackspace className='h-6 w-6'/>
