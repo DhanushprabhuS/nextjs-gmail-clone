@@ -3,11 +3,12 @@ import Email from '@/components/Emails';
 import EmailTypeBtns from '@/components/EmailTypeBtns';
 import Inbox from '@/components/Inbox';
 import { usePathname } from 'next/navigation';
+import Footer from '@/components/Footer';
 
 const EmailCategoryPage = ({data,id}) =>{
 
   const [start,setStart] = useState(0);
-  const [end,setEnd] = useState(20);
+  const [end,setEnd] = useState(10);
   const length = data.length;
   var slicedData = data.slice(start,end);
   const pathname = usePathname();
@@ -17,7 +18,7 @@ const EmailCategoryPage = ({data,id}) =>{
     //console.log(`The page is now: ${pathname}`);
     //whenever there is a change in path
     setStart(0);
-    setEnd(20);
+    setEnd(10);
 
   }, [pathname]);
 
@@ -27,7 +28,8 @@ const EmailCategoryPage = ({data,id}) =>{
     <Inbox start={start} setStart={setStart} 
         end={end} setEnd={setEnd} length={length} />
     <EmailTypeBtns/>
-    <Email emails={slicedData}  type={id}/>
+    <Email emails={slicedData} />
+    <Footer/>
   </>
   )
 }

@@ -35,8 +35,8 @@ const Inbox = ({start,end,setStart,setEnd,length}) => {
               <div className={`p-1.5 box-border rounded-full  hover:text-gray-800 cursor-pointer duration-150 ${start>0?'hover:bg-gray-200':''}`}
               onClick={()=>{
                 if(start>0){
-                  setEnd((prev)=>prev-20);
-                  setStart((prev)=>prev-20);
+                  setEnd((prev)=>prev-10);
+                  setStart((prev)=>prev-10);
                 }
               }}
               >
@@ -45,8 +45,8 @@ const Inbox = ({start,end,setStart,setEnd,length}) => {
               <div className={`p-1.5 box-border rounded-full  hover:text-gray-800 cursor-pointer duration-150 ${end<length?'hover:bg-gray-200':''}`}
               onClick={()=>{
                 if(end<length){
-                  setEnd((prev)=>prev+20);
-                  setStart((prev)=>prev+20);
+                  setEnd((prev)=>prev+10);
+                  setStart((prev)=>prev+10);
                 }
               }}
               >

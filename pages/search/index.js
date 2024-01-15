@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import SearchResults from '@/components/SearchResults';
 import Inbox from '@/components/Inbox';
+import Footer from '@/components/Footer';
 
 export default function EmailSearchPage ({data}) {
 
@@ -19,7 +20,7 @@ export default function EmailSearchPage ({data}) {
     })
 
   const [start,setStart] = useState(0);
-  const [end,setEnd] = useState(20);
+  const [end,setEnd] = useState(10);
   const length = filteredData.length;
   var slicedData = filteredData.slice(start,end);
   
@@ -28,7 +29,7 @@ export default function EmailSearchPage ({data}) {
     useEffect(()=>{
       console.log(router.query.value);
       setStart(0);
-      setEnd(20);
+      setEnd(10);
 
     },[router])
 
@@ -37,6 +38,7 @@ export default function EmailSearchPage ({data}) {
         <Inbox start={start} setStart={setStart} 
         end={end} setEnd={setEnd} length={length} />
         <SearchResults emailsdata={slicedData}  backLink={backLink}/>
+        <Footer/>
     </>
 }
 

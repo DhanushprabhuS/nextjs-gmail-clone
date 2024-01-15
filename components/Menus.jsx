@@ -1,31 +1,15 @@
 import React, { useState } from "react";
-import { MdOutlineChatBubbleOutline, MdOutlineGroups, MdEmail } from "react-icons/md";
-import { FiMenu, FiVideo } from "react-icons/fi";
+import { FiMenu} from "react-icons/fi";
 import { IoMdTime } from "react-icons/io";
 import { MdOutlineStarBorder, MdOutlineLabel, MdSettings, MdOutlineScheduleSend } from "react-icons/md";
 import { RiPencilLine , RiInboxFill, RiSendPlane2Line, RiDraftFill, RiSpamLine } from "react-icons/ri";
 import { BiLabel,BiTrash } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import Menu from "./Menu";
-import MenuOpen from "./MenuOpen";
+import { Tooltip } from "@nextui-org/tooltip";
 
 
 const Menus = ({isMenuClicked,setIsMenuClicked}) => {
-  const menus = [
-    {
-      icon: <MdOutlineChatBubbleOutline className="w-5 h-5" />,
-      title: "Chat",
-    },
-    {
-      icon: <MdOutlineGroups className="w-5 h-5" />,
-      title: "Spaces",
-    },
-    {
-      icon: <FiVideo className="w-5 h-5" />,
-      title: "Meet",
-    },
-  ];
-
   const buttons = [
     {
       id:1,
@@ -114,18 +98,21 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
        ${ishover|| isClicked?'w-62':'w-16'}`}
       >
 
-        <div className="w-16 text-center px-3 py-2 bg-slate-100 left-0 -mt-[52px]
-        text-[#5F6368] top-0 cursor-pointer hover:text-[#001D35] hover:font-semibold duration-150">
-          <div className="flex justify-center p-2.5 rounded-full hover:bg-[#b9bbc048] cursor-pointer">
-            <FiMenu className="w-5 h-5" 
-            onClick={
-              ()=>{
-                setIsClicked((isClicked)=>!isClicked);
-                setIsMenuClicked((prev)=>!prev);
-                }
-            }/>
+        <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Main menu</div>} 
+        placement='bottom'>
+          <div className="w-16 text-center px-3 py-2 bg-slate-100 left-0 -mt-[52px]
+          text-[#5F6368] top-0 cursor-pointer hover:text-[#001D35] hover:font-semibold duration-150">
+            <div className="flex justify-center p-2.5 rounded-full hover:bg-[#b9bbc048] cursor-pointer">
+              <FiMenu className="w-5 h-5" 
+              onClick={
+                ()=>{
+                  setIsClicked((isClicked)=>!isClicked);
+                  setIsMenuClicked((prev)=>!prev);
+                  }
+              }/>
+            </div>
           </div>
-        </div>
+        </Tooltip>
         
         <div
           onMouseOver={()=>setIshover(true)}
@@ -137,7 +124,7 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
           </div>
         
           {buttons.map((menu,index) => (
-            <Menu link={menu.link} icon={menu.icon} title={menu.title} ishover={ishover||isClicked} isactive={isactive} handleActive={setIsActive} index={index} id={id} setId={setId} key={menu.id}/>
+            <Menu link={menu.link} icon={menu.icon} title={menu.title} ishover={ishover||isClicked} isactive={isactive} handleActive={setIsActive} index={index} id={id} setId={setId} />
           ))}
         </div>
 

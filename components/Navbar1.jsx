@@ -5,21 +5,14 @@ import { IoHelpCircleOutline, IoSettingsOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useDebounce } from "use-debounce";
 import Logo from '../assets/logo_gmail.png';
+import { Tooltip } from "@nextui-org/tooltip";
 
 
 const Navbar1 = () => {
   
   const [query,setQuery] = useState('');
   const router = useRouter();
-  const [value] = useDebounce(query,500);
-
-  /*useEffect(()=>{
-    router.push(`/search?value=${query}`)
-  },[query,router])
-  */
-
 
   return (
     <>
@@ -66,16 +59,29 @@ const Navbar1 = () => {
 
         {/* Right Side */}
         <div className="flex items-center gap-4">
+        <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Support</div>} 
+        placement='bottom'>
           <div className="p-1.5 box-border rounded-full hover:bg-gray-200 duration-150 cursor-pointer">
             <IoHelpCircleOutline className="w-7 h-7 text-[#5F6368] hidden sm:flex hover:text-gray-800" />
           </div>
+        </Tooltip>
+
+        <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Settings</div>} 
+        placement='bottom'>
           <div className="p-1.5 box-border rounded-full hover:bg-gray-200 duration-150 cursor-pointer">
             <IoSettingsOutline className="w-6 h-6 text-[#5F6368] hidden sm:flex hover:text-gray-800" />
           </div>
+        </Tooltip>
+
+        <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Google apps</div>} 
+        placement='bottom'>
           <div className="p-1.5 box-border rounded-full hover:bg-gray-200 duration-150 cursor-pointer">
             <CgMenuGridO className="w-6 h-6 text-[#5F6368] hidden sm:flex hover:text-gray-800" />
           </div>
+        </Tooltip>
           
+        <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Google Account</div>} 
+        placement='bottom'>
           <div className="w-9 h-9 rounded-full">
               <Image 
               src={'https://assets.leetcode.com/users/avatars/avatar_1703733806.png'} 
@@ -84,6 +90,7 @@ const Navbar1 = () => {
               height={100}
               className="object-cover w-9 h-9 rounded-full" />
           </div>
+        </Tooltip>
         </div>
       </div>
     </>

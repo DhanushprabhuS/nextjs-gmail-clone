@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import Menus from './Menus';
 import Navbar1 from './Navbar1';
-import LeftSide from './LeftSide';
 import Inbox from './Inbox';
 import Emails from './Emails';
 import Footer from './Footer';
-import EmailTypeBtns from './EmailTypeBtns';
 
 
 

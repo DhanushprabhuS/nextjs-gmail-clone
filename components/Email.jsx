@@ -28,13 +28,13 @@ const Email = ({id, expeditor, messageTitle, message, timestamp, type }) => {
 
           <div className="flex -ml-2 items-center gap-[0.5] cursor-pointer w-[14rem] truncate">
 
-            <div className="p-2 text-gray-400 rounded-full group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+            <div className="hidden md:flex p-2 text-gray-400 rounded-full group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
               <MdCheckBoxOutlineBlank className="w-4 h-4" />
             </div>
-            <div className="p-2 rounded-full text-gray-400 group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+            <div className="hidden md:flex p-2 rounded-full text-gray-400 group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
               <MdStarBorder className="w-4 h-4" />
             </div>
-            <div className="p-1 text-black font-semibold cursor-pointer truncate">
+            <div className="ml-2 md:ml-0 p-1 text-black font-semibold cursor-pointer truncate">
               <p>{expeditor}</p>
             </div>
 

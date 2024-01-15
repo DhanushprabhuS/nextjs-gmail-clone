@@ -1,11 +1,12 @@
 import EmailTypeBtns from '@/components/EmailTypeBtns';
 import Emails from '@/components/Emails';
+import Footer from '@/components/Footer';
 import Inbox from '@/components/Inbox';
 import { useState } from 'react';
 
 export default function Home({data}) {
   const [start,setStart] = useState(0);
-  const [end,setEnd] = useState(20);
+  const [end,setEnd] = useState(10);
   const length = data.length;
   var slicedData = data.slice(start,end);
   
@@ -15,6 +16,7 @@ export default function Home({data}) {
         end={end} setEnd={setEnd} length={length}/>
       <EmailTypeBtns />
       <Emails emails={slicedData}/>
+      <Footer/>
     </>
       
   )
