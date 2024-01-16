@@ -8,7 +8,7 @@ const Menu = ({link, icon, title,ishover, isactive, handleActive, id, index, set
       key={title} 
       className={`text-start 
       px-3 py-[1px] bg-slate-100 text-[#5F6368] 
-      duration-200 cursor-pointer`}
+      duration-1000 cursor-pointer m-0`}
 
       onClick={()=>{
         handleActive(true);
@@ -16,9 +16,9 @@ const Menu = ({link, icon, title,ishover, isactive, handleActive, id, index, set
       
       }}
     >
-        <div className={`flex  items-center gap-4 p-2 ${ishover?' rounded-r-full ':' rounded-full justify-center'} duration-200 cursor-pointer ${isactive&&id==index?'bg-[#D3E3FD] text-[#001d35] font-semibold':'hover:bg-[#b9bbc048] hover:text-[#001D35] hover:font-semibold'}`}>
+        <div className={`flex  items-center gap-3 p-2 ${ishover?' rounded-r-full ':' rounded-full justify-center'} duration-200 cursor-pointer ${isactive&&id==index?'bg-[#D3E3FD] text-[#001d35] font-semibold':'hover:bg-[#b9bbc048] hover:text-[#001D35] hover:font-semibold'}`}>
           <span>{icon}</span>
-          <span className={`${ishover?'block':'hidden'}`}>{title}</span>
+          <span className={`text-sm ${ishover?'block':'hidden'}`}>{title}</span>
         </div>
 
     </div>

@@ -12,7 +12,7 @@ export default function Home({data}) {
   
   return (
     <>
-    <Inbox start={start} setStart={setStart} 
+      <Inbox start={start} setStart={setStart} 
         end={end} setEnd={setEnd} length={length}/>
       <EmailTypeBtns />
       <Emails emails={slicedData}/>

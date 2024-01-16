@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
-import { MdDiscount, MdInbox, MdOutlineSupervisorAccount, MdStayPrimaryLandscape } from "react-icons/md";
+import {  MdInbox} from "react-icons/md";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -11,7 +10,6 @@ const paths = ['primary','promotion','social']
 
   return (
         <div className="flex w-full bg-white ">
-
             {
                 paths.map(link=>{
                     return(
@@ -30,8 +28,6 @@ const paths = ['primary','promotion','social']
                     )
                 })
             }
-            
-            
         </div>
   )
 }

@@ -1,9 +1,10 @@
 import React from "react";
-import { MdCheckBoxOutlineBlank, MdDragIndicator, MdStar, MdStarBorder } from "react-icons/md";
+import { MdCheckBoxOutlineBlank, MdDragIndicator, MdStarBorder } from "react-icons/md";
 import Link from "next/link";
 import { BiArchiveIn } from "react-icons/bi";
 import { RiDeleteBin6Line, RiMailUnreadLine } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { Tooltip } from "@nextui-org/tooltip";
 
 const Email = ({id, expeditor, messageTitle, message, timestamp, type }) => {
   return (
@@ -28,12 +29,20 @@ const Email = ({id, expeditor, messageTitle, message, timestamp, type }) => {
 
           <div className="flex -ml-2 items-center gap-[0.5] cursor-pointer w-[14rem] truncate">
 
-            <div className="hidden md:flex p-2 text-gray-400 rounded-full group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-              <MdCheckBoxOutlineBlank className="w-4 h-4" />
-            </div>
-            <div className="hidden md:flex p-2 rounded-full text-gray-400 group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-              <MdStarBorder className="w-4 h-4" />
-            </div>
+            <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Select</div>} 
+          placement='bottom'>
+              <div className="hidden md:flex p-2 text-gray-400 rounded-full group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                <MdCheckBoxOutlineBlank className="w-4 h-4" />
+              </div>
+            </Tooltip>
+
+            <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Not starred</div>} 
+        placement='bottom'>
+              <div className="hidden md:flex p-2 rounded-full text-gray-400 group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                <MdStarBorder className="w-4 h-4" />
+              </div>
+            </Tooltip>
+
             <div className="ml-2 md:ml-0 p-1 text-black font-semibold cursor-pointer truncate">
               <p>{expeditor}</p>
             </div>
@@ -53,21 +62,33 @@ const Email = ({id, expeditor, messageTitle, message, timestamp, type }) => {
 
           <div className=" text-gray-600 gap-3 m-0 cursor-pointer hidden group-hover:flex">
            
-            <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-              <BiArchiveIn className="w-4 h-4" />
-            </div>
+            <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Archive</div>} 
+        placement='bottom'>
+              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                <BiArchiveIn className="w-4 h-4" />
+              </div>
+            </Tooltip>
 
-            <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-              <RiDeleteBin6Line className="w-4 h-4" />
-            </div>
+            <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Delete</div>} 
+        placement='bottom'>
+              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                <RiDeleteBin6Line className="w-4 h-4" />
+              </div>
+            </Tooltip>
 
-            <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-              <RiMailUnreadLine className="w-4 h-4" />
-            </div>
+            <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Mark as read</div>} 
+        placement='bottom'>
+              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                <RiMailUnreadLine className="w-4 h-4" />
+              </div>
+            </Tooltip>
 
-            <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-              <AiOutlineClockCircle className="w-4 h-4" />
-            </div>
+            <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Snooze</div>} 
+        placement='bottom'>
+              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                <AiOutlineClockCircle className="w-4 h-4" />
+              </div>
+            </Tooltip>
             
           </div>
 

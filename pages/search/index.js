@@ -1,4 +1,4 @@
-
+"use client";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import SearchResults from '@/components/SearchResults';
@@ -27,7 +27,6 @@ export default function EmailSearchPage ({data}) {
   
 
     useEffect(()=>{
-      console.log(router.query.value);
       setStart(0);
       setEnd(10);
 

@@ -94,8 +94,8 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
   return (
       <div className={`mt-14 h-full flex flex-col 
         fixed left-1 
-       bg-slate-100 duration-100 z-10 
-       ${ishover|| isClicked?'w-62':'w-16'}`}
+       bg-slate-100 duration-150 z-10 
+       ${ishover|| isClicked?'w-64':'w-16'}`}
       >
 
         <Tooltip content={<div className='bg-black opacity-75 text-white text-[12px] rounded-md px-1 py-1 -mt-3 '>Main menu</div>} 
@@ -123,9 +123,11 @@ const Menus = ({isMenuClicked,setIsMenuClicked}) => {
             <span className={`${ishover||isClicked?'block':'hidden'} font-semibold`}>Compose</span>
           </div>
         
-          {buttons.map((menu,index) => (
-            <Menu link={menu.link} icon={menu.icon} title={menu.title} ishover={ishover||isClicked} isactive={isactive} handleActive={setIsActive} index={index} id={id} setId={setId} />
-          ))}
+          <div className="mt-4">
+            {buttons.map((menu,index) => (
+              <Menu link={menu.link} icon={menu.icon} title={menu.title} ishover={ishover||isClicked} isactive={isactive} handleActive={setIsActive} index={index} id={id} setId={setId} />
+            ))}
+          </div>
         </div>
 
       </div>

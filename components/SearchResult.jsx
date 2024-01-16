@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BiArchiveIn } from "react-icons/bi";
 import { RiDeleteBin6Line, RiMailUnreadLine } from "react-icons/ri";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import TooltipCover from "./TooltipCover";
 
 function SearchResult({id, expeditor, messageTitle, message, timestamp, type, backLink }) {
     return (
@@ -28,12 +29,18 @@ function SearchResult({id, expeditor, messageTitle, message, timestamp, type, ba
   
             <div className="flex -ml-2 items-center gap-[0.5] cursor-pointer w-[14rem] truncate">
   
+            <TooltipCover content={'Select'}>
               <div className="p-2 text-gray-400 rounded-full group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
                 <MdCheckBoxOutlineBlank className="w-4 h-4" />
               </div>
+            </TooltipCover>
+
+            <TooltipCover content={'Not starred'}>
               <div className="p-2 rounded-full text-gray-400 group-hover:text-gray-600 hover:bg-[#b9bbc048] duration-150 cursor-pointer">
                 <MdStarBorder className="w-4 h-4" />
               </div>
+            </TooltipCover>
+
               <div className="p-1 text-black font-semibold cursor-pointer truncate">
                 <p>{expeditor}</p>
               </div>
@@ -52,23 +59,29 @@ function SearchResult({id, expeditor, messageTitle, message, timestamp, type, ba
             </div>
   
             <div className=" text-gray-600 gap-3 m-0 cursor-pointer hidden group-hover:flex">
-             
-              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-                <BiArchiveIn className="w-4 h-4" />
-              </div>
-  
-              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-                <RiDeleteBin6Line className="w-4 h-4" />
-              </div>
-  
-              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-                <RiMailUnreadLine className="w-4 h-4" />
-              </div>
-  
-              <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
-                <AiOutlineClockCircle className="w-4 h-4" />
-              </div>
-              
+              <TooltipCover content={'Archive'}>
+                <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                  <BiArchiveIn className="w-4 h-4" />
+                </div>
+              </TooltipCover>
+    
+              <TooltipCover content={'Delete'}>
+                <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                  <RiDeleteBin6Line className="w-4 h-4" />
+                </div>
+              </TooltipCover>
+
+              <TooltipCover content={'Mark as read'}>
+                <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                  <RiMailUnreadLine className="w-4 h-4" />
+                </div>
+              </TooltipCover>
+    
+              <TooltipCover content={'Snooze'}>
+                <div className="flex items-center p-2 rounded-full hover:bg-[#b9bbc048] duration-150 cursor-pointer">
+                  <AiOutlineClockCircle className="w-4 h-4" />
+                </div>
+              </TooltipCover>
             </div>
   
         </Link>

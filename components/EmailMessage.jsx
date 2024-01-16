@@ -1,9 +1,11 @@
 import React from 'react';
-import { MdKeyboardBackspace, MdMoreVert, MdOutlineDelete, MdOutlineSnooze, MdReportGmailerrorred } from 'react-icons/md';
+import { MdKeyboardBackspace, MdMoreVert, MdOutlineDelete, MdReportGmailerrorred } from 'react-icons/md';
 import { useRouter } from 'next/router'
 import { BiArchiveIn} from 'react-icons/bi';
 import { CgMailForward, CgMailReply } from 'react-icons/cg';
 import { Tooltip } from '@nextui-org/tooltip';
+import { AiOutlineClockCircle } from 'react-icons/ai';
+import TooltipCover from './TooltipCover';
 
 const EmailMessage = ({data}) => {
 
@@ -23,7 +25,7 @@ const EmailMessage = ({data}) => {
       title: "Delete",
     },
     {
-      icon:   <MdOutlineSnooze className='h-5 w-5'/>,
+      icon:   <AiOutlineClockCircle className="w-5 h-5" />,
       title: "Snooze",
     },
     {
@@ -36,31 +38,27 @@ const EmailMessage = ({data}) => {
     <div className='bg-white h-[500px] w-full flex flex-col space-y-6 pl-10 mt-2 rounded-2xl'>
       <div className='flex items-center gap-3 box-content text-gray-500 mt-2'>
         
-      <Tooltip content={
-        <div className='bg-black opacity-75 text-white text-sm rounded-md px-1 py-1 -mt-2'>Back to inbox</div>
-      } placement='bottom'>
+      <TooltipCover content={'Back to inbox'}>
         <div onClick={() => router.back()} className="-ml-4 flex items-center p-2 hover:bg-gray-100 hover:text-gray-800 rounded-full duration-150 cursor-pointer">
         <MdKeyboardBackspace className='h-5 w-5'/>
         </div>
-      </Tooltip>
+      </TooltipCover>
+      
         {
           menuslist.map((item)=>{
             return(
               <div key={item.title}>
-              <Tooltip content={
-                <div className='bg-black opacity-75 text-white text-sm rounded-md px-1 py-1 -mt-2 '>{item.title}</div>
-                } 
-              placement='bottom'>
+              <TooltipCover content={item.title}>
                 <div className="flex items-center p-2 hover:bg-gray-100 hover:text-gray-800 rounded-full duration-150 cursor-pointer">
                 {item.icon}
                 </div>
-              </Tooltip>
+              </TooltipCover>
               </div>
             )
           })
         }
       </div>
-      <h1 className='text-2xl pl-14'>{data.messageTitle}</h1>
+      <h1 className='text-2xl pl-8'>{data.messageTitle}</h1>
       <div className='flex flex-row justify-between'>
         <div className='flex space-x-3 -ml-5'>
           <span className='flex h-10 w-10 rounded-full bg-blue-600 p-3 items-center justify-center text-white text-4xl'>{data?.expeditor[0]}</span>
